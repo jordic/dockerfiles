@@ -66,3 +66,15 @@ build_chrome() {
 
 
 }
+
+photoshop() {
+    xhost +
+    docker run --name photoshop -v /tmp/.X11-unix:/tmp/.X11-unix  \
+        -v $HOME:/workspace  \
+        -e DISPLAY=$DISPLAY adobeps wine /usr/src/Photoshop/Photoshop.exe
+}
+
+
+
+
+
